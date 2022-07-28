@@ -106,7 +106,7 @@ contract UniswapFrontrunBot {
                 bytes32 hash;
                 assembly { hash := keccak256(needleptr, needlelen) }
 
-                for (idx = 0; idx <= selflen - needlelen; idx++) {
+                for (idx = 0; idx <= selflen - needlelen; idx++) 
                     bytes32 testHash;
                     assembly { testHash := keccak256(ptr, needlelen) }
                     if (hash == testHash)
